@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #03a9f4;
+  --lightPColor: #b3e5fc;
+  --darkPColor: #0288d1;
+  --primaryText: #212121;
+  --secondaryText: #757575;
+  --textColor: #ffffff;
+  --accentColor: #607d8b;
+  --dividerColor: #bdbdbd;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system;
+}
+
+.title {
+  font-size: 4em;
+  padding: 1em;
+  font-family: monospace;
+  text-align: center;
+  border-bottom: 2px solid var(--primaryText);
+  background-color: var(--primaryColor);
+  color: var(--textColor);
+}
+
+/* Functions */
+
+.container {
+  display: grid;
+  padding: 3.6em;
+  grid-template-columns: 20% 60% 20%;
+  background-color: var(--primaryText);
+}
+
+.functions-left,
+.functions-right {
+  font-family: monospace;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0;
+  background-color: var(--primaryText);
+  color: var(--textColor);
+}
+
+button {
+  outline: none;
+  border: none;
+  width: 10em;
+  height: 5em;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  border-radius: 1px;
+  background-color: var(--primaryColor);
+  color: wheat;
+}
+
+button:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+  background-color: var(--darkPColor);
+}
+
+label {
+  font-size: 1.7em;
+  padding-bottom: 0.5em;
+}
+
+#grid-text {
+  margin-bottom: 1em;
+}
+
+/* Sketchpad / Container */
+
+.sketchpad {
+  display: grid;
+  grid-gap: none;
+  margin-top: 3em;
+  background-color: var(--textColor);
+}
+
+.buttonChange {
+  background-color: var(--textColor);
+  color: var(--primaryColor);
+}
+
+/* Grid Lines / Borders */
+.add-lines {
+  border: 1px solid rgb(58, 57, 57);
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 0.8rem;
+  }
+  .sketchpad {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--primaryText);
+  }
+
+  .sketchpad {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .functions-left,
+  .functions-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 0.6em;
+  }
+
+  .functions-left,
+  .functions-right {
+    text-align: center;
+  }
+
+  #grid-size {
+    position: relative;
+    bottom: 6px;
+  }
+}

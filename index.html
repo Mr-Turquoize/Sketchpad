@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content='IT=Edge'>
+    <meta name='viewport' content='width=device-width, intial-scale = 1.0'>
+    <title>SketchPad</title>
+    <!-- Css stylesheet integration -->
+    <link rel='stylesheet' href='style.css'>
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+    <h1 class="title">Etch A Sketch</h1>
+    <div class="container">
+        <div class="functions-left">
+            <label for="color">Select Color</label>
+            <input id="color" type="color" name="base" value="#ffc600">
+            <button id="pixel-graffiti" class="btn">Pixel Graffiti</button>
+            <button id="bgcolor" class="btn">Random Background</button>
+            <button id="random-mode" class="btn">Random Color Mode </button>
+
+        </div>
+
+        <div class="sketchpad">
+        </div>
+
+        <div class="functions-right">
+            <label for="grid-size" id="grid-text">Grid Size</label>
+            <input id="grid-size" type="range" min="10" max="64" value="16">
+            <button id="line-toggle" class="btn">Toggle Grid Lines</button>
+            <button id="clear">Clear Board</button>
+            <button id="eraser" class="btn">Eraser</button>
+        </div>
+    </div>
+</body>
+
+</html>
